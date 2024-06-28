@@ -78,7 +78,10 @@ namespace _019_BackupRestore
 
         private void BackupButton_Click(object sender, EventArgs e)
         {
-            BackupDatabase();
+            //BackupDatabase();
+            Form form = new BackupForm();
+            form.ShowDialog();
+            form.Dispose();
         }
 
         private void restoreButton_Click(object sender, EventArgs e)
