@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.actionPanel = new System.Windows.Forms.Panel();
-            this.backupButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.backupButton = new System.Windows.Forms.Button();
             this.browseButton = new System.Windows.Forms.Button();
             this.fileTextBox = new System.Windows.Forms.TextBox();
             this.textPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.actionPanel.SuspendLayout();
@@ -57,17 +57,17 @@
             this.actionPanel.Size = new System.Drawing.Size(527, 79);
             this.actionPanel.TabIndex = 1;
             // 
-            // backupButton
+            // button1
             // 
-            this.backupButton.Image = global::_019_BackupRestore.Properties.Resources.backup_backups_daily_data_database_icon;
-            this.backupButton.Location = new System.Drawing.Point(12, 12);
-            this.backupButton.Name = "backupButton";
-            this.backupButton.Size = new System.Drawing.Size(151, 55);
-            this.backupButton.TabIndex = 0;
-            this.backupButton.Text = "Backup && Exit";
-            this.backupButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.backupButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.backupButton.UseVisualStyleBackColor = true;
+            this.button1.Image = global::_019_BackupRestore.Properties.Resources.help_icon;
+            this.button1.Location = new System.Drawing.Point(364, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 55);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Help?";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // exitButton
             // 
@@ -82,17 +82,18 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // button1
+            // backupButton
             // 
-            this.button1.Image = global::_019_BackupRestore.Properties.Resources.help_icon;
-            this.button1.Location = new System.Drawing.Point(364, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 55);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Help?";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.backupButton.Image = global::_019_BackupRestore.Properties.Resources.backup_backups_daily_data_database_icon;
+            this.backupButton.Location = new System.Drawing.Point(12, 12);
+            this.backupButton.Name = "backupButton";
+            this.backupButton.Size = new System.Drawing.Size(151, 55);
+            this.backupButton.TabIndex = 0;
+            this.backupButton.Text = "Backup && Exit";
+            this.backupButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.backupButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.backupButton.UseVisualStyleBackColor = true;
+            this.backupButton.Click += new System.EventHandler(this.BackupButton_Click);
             // 
             // browseButton
             // 
@@ -124,23 +125,15 @@
             this.textPanel.Size = new System.Drawing.Size(527, 129);
             this.textPanel.TabIndex = 4;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Consider the following while backing up:";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(16, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(380, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "1. Be sure to display the message of success after completing the backup. Otherwi" +
-    "se there is a problem. Try again";
+            this.label4.Location = new System.Drawing.Point(16, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(396, 38);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "3. Be sure to back up the information at different times. In any circumstances an" +
+    "d at any time, the responsibility for the loss of information is at your own ris" +
+    "k";
             // 
             // label3
             // 
@@ -151,15 +144,23 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "2. No error should be displayed when backing up. An error means no backups";
             // 
-            // label4
+            // label2
             // 
-            this.label4.Location = new System.Drawing.Point(16, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(396, 38);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "3. Be sure to back up the information at different times. In any circumstances an" +
-    "d at any time, the responsibility for the loss of information is at your own ris" +
-    "k";
+            this.label2.Location = new System.Drawing.Point(16, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(380, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "1. Be sure to display the message of success after completing the backup. Otherwi" +
+    "se there is a problem. Try again";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Consider the following while backing up:";
             // 
             // panel1
             // 
@@ -179,8 +180,8 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(377, 32);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Warning: Before you change Windows and remove the program, be sure to  copy the i" +
-    "nstallation folder and keep it safe.";
+            this.label5.Text = "Warning: Before you change Windows or remove the program, be sure to  copy the in" +
+    "stallation folder and keep it safe.";
             // 
             // BackupForm
             // 

@@ -52,7 +52,7 @@
             this.restoreButton.TabIndex = 1;
             this.restoreButton.Text = "Restore!";
             this.restoreButton.UseVisualStyleBackColor = true;
-            this.restoreButton.Click += new System.EventHandler(this.restoreButton_Click);
+            this.restoreButton.Click += new System.EventHandler(this.RestoreButton_Click);
             // 
             // StartForm
             // 

@@ -18,32 +18,6 @@ namespace _019_BackupRestore
             InitializeComponent();
         }
 
-        void BackupDatabase()
-        {
-            System.Data.SqlClient.SqlCommand command = new System.Data.SqlClient.SqlCommand();
-            System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection();
-            string qryText;
-
-            connection.ConnectionString = _019_BackupRestore.Properties.Settings.Default.LoginLessonConnectionString;
-            command.Connection = connection;
-            qryText = @"BACKUP DATABASE [phone_book_Lesson] TO  DISK = N'C:\DatabasesHold\Backups\phone_book_Lesson3.bak' 
-                    WITH NOFORMAT, INIT,  NAME = N'phone_book_Lesson-Full Database Backup', 
-                    SKIP, NOREWIND, NOUNLOAD,  STATS = 10";
-            try
-            {
-                command.CommandTimeout = 30; //This is the default so it is a bit unnecessary other than an example
-                connection.Open();
-                command.CommandText = qryText;
-                command.ExecuteNonQuery();
-                connection.Close();
-                Notify("Backup successful");
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         void RestoreDatabase()
         {
@@ -84,7 +58,7 @@ namespace _019_BackupRestore
             form.Dispose();
         }
 
-        private void restoreButton_Click(object sender, EventArgs e)
+        private void RestoreButton_Click(object sender, EventArgs e)
         {
             RestoreDatabase();
         }
