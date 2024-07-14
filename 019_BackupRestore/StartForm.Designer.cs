@@ -63,6 +63,7 @@
             this.Controls.Add(this.backupButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "StartForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shop Pro";
             this.ResumeLayout(false);
 

@@ -99,7 +99,7 @@
             // 
             this.browseButton.Location = new System.Drawing.Point(13, 172);
             this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(75, 23);
+            this.browseButton.Size = new System.Drawing.Size(94, 23);
             this.browseButton.TabIndex = 2;
             this.browseButton.Text = "Select Folder";
             this.browseButton.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             // 
             // fileTextBox
             // 
-            this.fileTextBox.Location = new System.Drawing.Point(94, 174);
+            this.fileTextBox.Location = new System.Drawing.Point(113, 174);
             this.fileTextBox.Name = "fileTextBox";
-            this.fileTextBox.Size = new System.Drawing.Size(421, 20);
+            this.fileTextBox.Size = new System.Drawing.Size(402, 20);
             this.fileTextBox.TabIndex = 3;
             // 
             // textPanel

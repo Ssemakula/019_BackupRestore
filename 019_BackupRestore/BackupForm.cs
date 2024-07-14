@@ -38,11 +38,15 @@ namespace _019_BackupRestore
             {
                 dialog.SelectedPath = lastSelectedPath;
             }
-
+            dialog.Description = "Select Backup folder";
             try
             {
                 dialog.ShowDialog();
                 folderName = dialog.SelectedPath;
+                if (!IsTrue(folderName))
+                {
+                    return;
+                }
                 lastSelectedPath = dialog.SelectedPath;
                 builderName = DateTime.Now.ToString("yyyyMMddHHmmss"); 
 
@@ -68,8 +72,8 @@ namespace _019_BackupRestore
 
         private string GetDefaultBackupDir()
         {
-            string defaultDir = "";
-            string path = Directory.GetCurrentDirectory();
+            string defaultDir;
+            string path = Directory.GetCurrentDirectory(); //Use environment perhaps?
 
             defaultDir = path + "\\backup";
             /*if (!Directory.Exists(defaultDir))
